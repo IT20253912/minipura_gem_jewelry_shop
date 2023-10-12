@@ -16,6 +16,9 @@ import { useNavigate } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 import ResponsiveAppBarLogin from "./common/ResponsiveAppBarLogin";
 import Swal from "sweetalert2";
+import Loginlogo from "./images/loginglogo.png";
+import DiamondIcon from '@mui/icons-material/Diamond';
+import BackgroundImage from "./images/loginbackground.jpg";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -72,36 +75,61 @@ function Login() {
     }
   };
 
+  const containerStyle = {
+    backgroundImage: `url(${BackgroundImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "top", // Set background position to top
+    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  };
+
   return (
-    <div>
-      <ResponsiveAppBarLogin />
-      <Container>
+    <div style={containerStyle}>
+      {/* <ResponsiveAppBarLogin /> */}
+      <Container >
         <center>
           <Card
-            sx={{ minWidth: 400, m: 5, p: 2, maxWidth: 500, mt: 15 }}
+            sx={{ minWidth: 400, m: 5, p: 2, maxWidth: 400,maxHeight:550 , mt: 10,borderRadius:4}}
             raised
           >
             <CardContent>
               <form onSubmit={loginUser}>
-                <CssBaseline />
+               
                 <Box
                   sx={{
-                    marginTop: 2,
+                    marginTop: 1,
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
+                   
                   }}
                 >
-                  <Avatar sx={{ m: 1 }}>
-                    <PersonIcon fontSize="large" />
-                  </Avatar>
-                  <Typography
+                  {/* <Avatar sx={{ m: 1 }}>
+                    <DiamondIcon fontSize="large" />
+                    <img src={Loginlogo}/>
+                  </Avatar> */}
+                 
+                    {/* <DiamondIcon fontSize="large" /> */}
+
+
+                    <Typography
                     component="h1"
                     variant="h5"
-                    style={{ fontWeight: 700, color: "#686965" }}
+                    style={{ fontWeight: 800, color: "#686965",marginBottom:15 }}
                   >
-                    User Login
+                    Login
                   </Typography>
+                    <img src={Loginlogo}
+                    alt="Login Logo"
+                    style={{ width: "200px", height: "200px" }}
+                    />
+              
+                  
+                  
+               
+                  
                   <Box sx={{ mt: 1 }}>
                     <TextField
                       margin="normal"
