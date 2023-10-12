@@ -17,7 +17,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import BackgroundImage from "./images/loginbackground.jpg";
+import BackgroundImage from "./images/loginbackfinal.jpg";
 
 function Register() {
   const [loading, setLoading] = useState(false);
@@ -85,12 +85,19 @@ function Register() {
     alignItems: "center",
   };
 
+  const cardStyle = {
+    borderRadius:3,
+    maxWidth: 450,
+    backgroundColor: "rgba(255, 255, 255, 0.5)", // Adjust the alpha (4th value) for transparency
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)", // Add a shadow for the glass effect
+  };
+
   return (
     <div style={containerStyle}>
       {/* <ResponsiveAppBarRegister /> */}
       <center>
         <Container sx={{ mt: 8}}>
-          <Paper elevation={7} sx={{ maxWidth: 450, borderRadius:3 }}>
+          <Paper elevation={7} sx={cardStyle}>
             <Box sx={{ m: 4 }}>
               <br></br>
               <Typography
@@ -179,7 +186,7 @@ function Register() {
                     color="primary"
                     disabled={loading}
                     style={{
-                      backgroundColor: "#22b14c",
+                      backgroundColor: "#ca8865",
                       width: "200px",
                     }}
                   >
