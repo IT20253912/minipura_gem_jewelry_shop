@@ -17,6 +17,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import BackgroundImage from "./images/loginbackground.jpg";
 
 function Register() {
   const [loading, setLoading] = useState(false);
@@ -74,12 +75,22 @@ function Register() {
     }
   };
 
+  const containerStyle = {
+    backgroundImage: `url(${BackgroundImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "top", // Set background position to top
+    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  };
+
   return (
-    <div>
-      <ResponsiveAppBarRegister />
+    <div style={containerStyle}>
+      {/* <ResponsiveAppBarRegister /> */}
       <center>
-        <Container sx={{ mt: 15 }}>
-          <Paper elevation={7} sx={{ maxWidth: 450 }}>
+        <Container sx={{ mt: 8}}>
+          <Paper elevation={7} sx={{ maxWidth: 450, borderRadius:3 }}>
             <Box sx={{ m: 4 }}>
               <br></br>
               <Typography
@@ -128,8 +139,8 @@ function Register() {
                       onChange={handleChangeRole}
                       required
                     >
-                      <MenuItem value={"farmer"}>Farmer</MenuItem>
-                      <MenuItem value={"customer"}>Customer</MenuItem>
+                      <MenuItem value={"farmer"}>Admin</MenuItem>
+                      <MenuItem value={"customer"}>User</MenuItem>
                     </Select>
                   </FormControl>
 

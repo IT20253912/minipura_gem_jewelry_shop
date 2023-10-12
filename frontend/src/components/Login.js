@@ -16,9 +16,9 @@ import { useNavigate } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 import ResponsiveAppBarLogin from "./common/ResponsiveAppBarLogin";
 import Swal from "sweetalert2";
-import Loginlogo from "./images/loginglogo.png";
+import Loginlogo from "./images/loginlogofinal.png";
 import DiamondIcon from '@mui/icons-material/Diamond';
-import BackgroundImage from "./images/loginbackground.jpg";
+import BackgroundImage from "./images/loginbackfinal.jpg";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -83,6 +83,20 @@ function Login() {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+
+    backdropFilter: "blur(50px)", // Add the glass effect
+    WebkitBackdropFilter: "blur(20px", // Add support for Webkit-based browsers
+  };
+
+  const cardStyle = {
+    minWidth: 400,
+    m: 5,
+    p: 2,
+    maxWidth: 400,
+    maxHeight:550,
+    borderRadius:4,
+    backgroundColor: "rgba(255, 255, 255, 0.5)", // Adjust the alpha (4th value) for transparency
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)", // Add a shadow for the glass effect
   };
 
   return (
@@ -91,7 +105,7 @@ function Login() {
       <Container >
         <center>
           <Card
-            sx={{ minWidth: 400, m: 5, p: 2, maxWidth: 400,maxHeight:550 , mt: 10,borderRadius:4}}
+            sx={cardStyle}
             raised
           >
             <CardContent>
@@ -117,7 +131,7 @@ function Login() {
                     <Typography
                     component="h1"
                     variant="h5"
-                    style={{ fontWeight: 800, color: "#686965",marginBottom:15 }}
+                    style={{ fontWeight: 1000, color: "#686965",marginBottom:-10 }}
                   >
                     Login
                   </Typography>
@@ -163,7 +177,7 @@ function Login() {
                       variant="contained"
                       sx={{ mt: 3, mb: 2 }}
                       style={{
-                        backgroundColor: "#22b14c",
+                        backgroundColor: "#ca8865",
                       }}
                     >
                       Sign In
@@ -181,10 +195,10 @@ function Login() {
                           href="/register"
                           variant="body2"
                           style={{
-                            color: "#22b14c",
+                            color: "#a03c0e",
                           }}
                         >
-                          Register Here
+                           &nbsp;Register Here
                         </Link>
                       </Stack>
                     </Grid>
@@ -194,17 +208,7 @@ function Login() {
                 <br />
                 <br />
 
-                <div>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    align="center"
-                  >
-                    {"Copyright © "}
-                    {new Date().getFullYear()}
-                    {"."}
-                  </Typography>
-                </div>
+                
               </form>
             </CardContent>
           </Card>
