@@ -1,4 +1,3 @@
-
 import { Container } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -16,7 +15,8 @@ import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
 import ResponsiveAppBar from "../common/ResponsiveAppBar";
 import ResponsiveAppBarNew from "../common/Responsivebaruser";
-// import Demo from "../common/Demo";
+import Demo from "../common/Demo";
+import Homelogo from "../images/logo5-removebg-preview.png";
 
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -128,18 +128,25 @@ function ViewAllItems() {
       {/* <ResponsiveAppBar  /> */}
 
       <ResponsiveAppBarNew badge={badge} />
-<br />
-<br />
+      <br />
+      <br />
       <center>
-        <Typography
+        {/* <Typography
           variant="h4"
           component="h3"
           style={{ fontWeight: 700, color: "#686965" }}
-          sx={{ mt: 10 }}
+          sx={{ mt: 6 }}
         >
           All Items
-        </Typography>
+        </Typography> */}
+
+        <img
+          src={Homelogo}
+          style={{ paddingTop: 60, width: "50%", height: "200px" }}
+        />
       </center>
+
+      <Demo />
 
       <Grid
         container
@@ -173,7 +180,7 @@ function ViewAllItems() {
       >
         {filterItems.map((item, key) => (
           <Card
-            sx={{ width: 300, height: 420, mx: 2, my: 3 }}
+            sx={{ width: 300, height: 420, mx: 2, my: 3, borderRadius: 4 }}
             key={key}
             style={{ backgroundColor: "#ffff" }}
             elevation={3}
@@ -187,7 +194,14 @@ function ViewAllItems() {
                   sx={{ width: 170, height: 170 }}
                 />
               </center>
-              <CardContent>
+              <CardContent
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center", // Center horizontally
+                  alignItems: "center", // Center vertically
+                }}
+              >
                 <Typography
                   gutterBottom
                   variant="h5"
@@ -205,11 +219,17 @@ function ViewAllItems() {
                   component="div"
                   style={{ fontWeight: 700, color: "#686965" }}
                 >
-                  Price : Rs. {parseInt(item.price).toLocaleString("en-US")}
+                  Rs. {parseInt(item.price).toLocaleString("en-US")}
                 </Typography>
               </CardContent>
             </CardActionArea>
-            <CardActions>
+            <CardActions
+              style={{
+                display: "flex",
+                justifyContent: "center", // Center horizontally
+                alignItems: "center", // Center vertically
+              }}
+            >
               <Button
                 variant="outlined"
                 startIcon={<AddShoppingCartIcon />}
