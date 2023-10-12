@@ -1,3 +1,4 @@
+
 import { Container } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -14,7 +15,8 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
 import ResponsiveAppBar from "../common/ResponsiveAppBar";
-import ResponsiveAppBarNew from "../common/ResponsiveAppBarNew";
+import ResponsiveAppBarNew from "../common/Responsivebaruser";
+// import Demo from "../common/Demo";
 
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -126,7 +128,8 @@ function ViewAllItems() {
       {/* <ResponsiveAppBar  /> */}
 
       <ResponsiveAppBarNew badge={badge} />
-
+<br />
+<br />
       <center>
         <Typography
           variant="h4"

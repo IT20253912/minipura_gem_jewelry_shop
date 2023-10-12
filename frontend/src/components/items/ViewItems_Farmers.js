@@ -103,7 +103,7 @@ function ViewItems_Farmers() {
           sx={{ mt: 13 }}
           style={{ fontWeight: 600, color: "#686965" }}
         >
-          Farmer's Home Page
+          Admin's Home Page
         </Typography>
       </center>
       <Grid

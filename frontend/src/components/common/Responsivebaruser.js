@@ -17,6 +17,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Logouser from "../images/logo4.PNG"
 
 const pages = [
   {
@@ -24,8 +25,8 @@ const pages = [
     link: "/allItems",
   },
   {
-    name: "Create Account",
-    link: "/register",
+    name: "|",
+    link: "/allItems",
   },
   {
     name: "Contacts Us",
@@ -57,16 +58,17 @@ const ResponsiveAppBar = (props) => {
   };
 
   return (
-    <AppBar position="fixed" style={{ background: "#ca8865" }}>
-      <Container maxWidth="xl">
+    <AppBar position="fixed" style={{ background: "#ca8865",maxHeight:100,minHeight:80 }}>
+      <Container maxWidth="x1">
         <Toolbar disableGutters>
+            <img src={Logouser} style={{ maxHeight:70, minHeight:70 }} />
           <Typography
             variant="h4"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" }, fontWeight: 700 }}
+            sx={{ mr: 8, display: { xs: "none", md: "flex" }, fontWeight: 600 , paddingTop:1}}
           >
-          Minipura Gem And Jewelry
+          
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -129,7 +131,7 @@ const ResponsiveAppBar = (props) => {
                 onClick={() => {
                   navigate(page.link);
                 }}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 3, color: "white", display: "block" }}
               >
                 {page.name}
               </Button>

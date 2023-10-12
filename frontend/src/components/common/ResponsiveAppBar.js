@@ -57,7 +57,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="fixed" style={{ background: "#22b14c" }}>
+    <AppBar position="fixed" style={{ background: "#ca8865" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -66,7 +66,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" }, fontWeight: 700 }}
           >
-            Agri Online Store
+            Minipura Gem And Jewelry
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -120,7 +120,7 @@ const ResponsiveAppBar = () => {
               fontWeight: 700,
             }}
           >
-            Agri Online Store
+            Minipura Gem And Jewelry
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
